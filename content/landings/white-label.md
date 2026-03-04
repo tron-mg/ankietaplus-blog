@@ -1,31 +1,33 @@
 ---
-title: "White Label ankiet — Twoja marka, zero brandingu narzędzia"
-metaTitle: "White Label ankiet — Twoja marka, zero brandingu narzędzia | AnkietaPlus"
-metaDescription: "Sprawdź jak white label ankiet — twoja marka, zero brandingu narzędzia i zamieniać odpowiedzi w decyzje biznesowe. AnkietaPlus: więcej funkcji, lepsza cena, szybkie wdrożenie."
-intent: "bofu"
-cta: "Załóż darmowe konto w AnkietaPlus"
+title: "White label ankiet: Twoja marka, zero logo narzędzia"
+metaTitle: "White label ankiet: Twoja marka, zero logo narzędzia | AnkietaPlus"
+metaDescription: "White label ankiet: Twoja marka, zero logo narzędzia. Zbieraj dane, zwiększaj konwersję i podejmuj szybsze decyzje z AnkietaPlus."
+category: "core"
+keyword: "white label ankiety"
+cover: "/images/landing-white-label.svg"
 ---
 
-# White Label ankiet — Twoja marka, zero brandingu narzędzia
+# White label ankiet: Twoja marka, zero logo narzędzia
 
-## Problem
-Użytkownicy chcą szybciej zbierać dane i podejmować decyzje bez angażowania agencji badawczej.
+## Dlaczego to ważne
+W wielu firmach dane zbierane są za wolno albo bez kontekstu biznesowego. To blokuje wzrost i decyzje.
 
-## Rozwiązanie AnkietaPlus
-- szybki start
-- logika pytań i automatyzacja
-- raporty i eksport
-- atrakcyjny koszt wejścia
+## Jak rozwiązuje to AnkietaPlus
+- szybkie uruchomienie badania
+- logika pytań i scenariusze warunkowe
+- raporty i eksport do narzędzi zespołu
+- korzystna cena względem funkcjonalności
 
-## Dlaczego to działa
-AnkietaPlus łączy prostotę obsługi z funkcjami enterprise, dzięki czemu możesz uruchamiać badania szybciej i taniej.
+## Kiedy użyć
+- gdy potrzebujesz decyzji w 24-72h
+- gdy chcesz podnieść jakość leadów i retencję
+- gdy musisz działać zgodnie z RODO
 
-## FAQ
-### Czy to działa bez logowania respondentów?
-Tak.
-
-### Czy mogę dostosować branding?
-Tak, dostępny White Label.
+## Powiązane treści
+- [Ankieta online dla firm, które chcą szybszych decyzji](/landing/ankieta-online)
+- [Kreator ankiet online z logiką pytań i automatyzacją](/landing/kreator-ankiet)
+- [Formularze online do zbierania leadów i zgłoszeń](/landing/formularze-online)
+- [Jak zrobić ankietę online, która zbiera odpowiedzi](/blog/jak-zrobic-ankiete-online)
 
 ## CTA
-**Przetestuj AnkietaPlus i uruchom pierwszą ankietę jeszcze dziś.**
+**Załóż konto i uruchom pierwszy projekt w AnkietaPlus jeszcze dziś.**

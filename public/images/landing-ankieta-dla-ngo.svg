@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1f2a5a"/><stop offset="100%" stop-color="#3b7a6b"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="rgba(10,15,25,0.35)" stroke="rgba(255,255,255,.25)"/>
+  <text x="130" y="360" fill="#fff" font-size="74" font-family="Inter, Arial" font-weight="800">Ankiety i konsultacje społeczne dla NGO i JST</text>
+  <text x="130" y="430" fill="#dce7ff" font-size="34" font-family="Inter, Arial">Landing Page</text>
+  <text x="130" y="760" fill="#c6d4ff" font-size="28" font-family="Inter, Arial">AnkietaPlus — więcej funkcji, lepsza cena</text>
+</svg>

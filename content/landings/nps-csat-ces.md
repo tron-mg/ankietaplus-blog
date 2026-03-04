@@ -1,31 +1,33 @@
 ---
-title: "NPS, CSAT i CES — badania satysfakcji klientów"
-metaTitle: "NPS, CSAT i CES — badania satysfakcji klientów | AnkietaPlus"
-metaDescription: "Sprawdź jak nps, csat i ces — badania satysfakcji klientów i zamieniać odpowiedzi w decyzje biznesowe. AnkietaPlus: więcej funkcji, lepsza cena, szybkie wdrożenie."
-intent: "bofu"
-cta: "Załóż darmowe konto w AnkietaPlus"
+title: "NPS, CSAT, CES — pomiar satysfakcji klientów"
+metaTitle: "NPS, CSAT, CES — pomiar satysfakcji klientów | AnkietaPlus"
+metaDescription: "NPS, CSAT, CES — pomiar satysfakcji klientów. Zbieraj dane, zwiększaj konwersję i podejmuj szybsze decyzje z AnkietaPlus."
+category: "cx"
+keyword: "nps csat ces"
+cover: "/images/landing-nps-csat-ces.svg"
 ---
 
-# NPS, CSAT i CES — badania satysfakcji klientów
+# NPS, CSAT, CES — pomiar satysfakcji klientów
 
-## Problem
-Użytkownicy chcą szybciej zbierać dane i podejmować decyzje bez angażowania agencji badawczej.
+## Dlaczego to ważne
+W wielu firmach dane zbierane są za wolno albo bez kontekstu biznesowego. To blokuje wzrost i decyzje.
 
-## Rozwiązanie AnkietaPlus
-- szybki start
-- logika pytań i automatyzacja
-- raporty i eksport
-- atrakcyjny koszt wejścia
+## Jak rozwiązuje to AnkietaPlus
+- szybkie uruchomienie badania
+- logika pytań i scenariusze warunkowe
+- raporty i eksport do narzędzi zespołu
+- korzystna cena względem funkcjonalności
 
-## Dlaczego to działa
-AnkietaPlus łączy prostotę obsługi z funkcjami enterprise, dzięki czemu możesz uruchamiać badania szybciej i taniej.
+## Kiedy użyć
+- gdy potrzebujesz decyzji w 24-72h
+- gdy chcesz podnieść jakość leadów i retencję
+- gdy musisz działać zgodnie z RODO
 
-## FAQ
-### Czy to działa bez logowania respondentów?
-Tak.
-
-### Czy mogę dostosować branding?
-Tak, dostępny White Label.
+## Powiązane treści
+- [Ankieta po zakupie zwiększająca retencję](/landing/ankieta-po-zakupie)
+- [Pytania do ankiety satysfakcji klienta — przykłady](/blog/pytania-do-ankiety-satysfakcji-klienta-przyklady)
+- [Co to jest NPS i jak go liczyć](/blog/co-to-jest-nps-i-jak-go-liczyc)
+- [CSAT vs CES — różnice i zastosowania](/blog/csat-vs-ces-roznice)
 
 ## CTA
-**Przetestuj AnkietaPlus i uruchom pierwszą ankietę jeszcze dziś.**
+**Załóż konto i uruchom pierwszy projekt w AnkietaPlus jeszcze dziś.**
