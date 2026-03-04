@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; background: #0f1218; color: #eaf0ff; }
+.wrap, .article { max-width: 980px; margin: 0 auto; padding: 1.2rem; }
+a { color: #87b3ff; }
+pre { white-space: pre-wrap; background: #161b24; border: 1px solid #293446; border-radius: 10px; padding: 1rem; }
+h1,h2 { line-height: 1.2; }
