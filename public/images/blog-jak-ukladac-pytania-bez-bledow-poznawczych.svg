@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#33204f"/><stop offset="100%" stop-color="#1f5c67"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="0.5" stop-color="#0ea5e9"/><stop offset="1" stop-color="#22c55e"/></linearGradient>
+    <filter id="b"><feGaussianBlur stdDeviation="40"/></filter>
   </defs>
   <rect width="1600" height="900" fill="url(#g)"/>
-  <rect x="80" y="80" width="1440" height="740" rx="28" fill="rgba(10,15,25,0.35)" stroke="rgba(255,255,255,.25)"/>
-  <text x="130" y="360" fill="#fff" font-size="74" font-family="Inter, Arial" font-weight="800">Jak układać pytania bez biasu</text>
-  <text x="130" y="430" fill="#dce7ff" font-size="34" font-family="Inter, Arial">Artykuł ekspercki</text>
-  <text x="130" y="760" fill="#c6d4ff" font-size="28" font-family="Inter, Arial">AnkietaPlus — więcej funkcji, lepsza cena</text>
+  <circle cx="280" cy="220" r="180" fill="rgba(255,255,255,.14)" filter="url(#b)"/>
+  <circle cx="1230" cy="180" r="210" fill="rgba(255,255,255,.10)" filter="url(#b)"/>
+  <circle cx="980" cy="680" r="250" fill="rgba(255,255,255,.12)" filter="url(#b)"/>
+  <rect x="120" y="120" width="1360" height="660" rx="36" fill="rgba(8,12,24,.28)" stroke="rgba(255,255,255,.22)"/>
+  <path d="M180 640 C380 520, 520 760, 760 610 S1160 540, 1420 650" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="8"/>
+  <path d="M180 700 C380 580, 520 820, 760 670 S1160 600, 1420 710" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="5"/>
 </svg>
