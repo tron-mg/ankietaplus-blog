@@ -4,7 +4,7 @@ export default function SecurityPolicyPage() {
       <h1>Security Policy</h1>
       <p>
         Jeśli znalazłeś podatność bezpieczeństwa, zgłoś ją na{' '}
-        <a href="mailto:security@ankietaplus.pl">security@ankietaplus.pl</a>.
+        <a href="mailto:kontakt@ankietaplus.pl">kontakt@ankietaplus.pl</a>.
       </p>
       <p>
         Prosimy o odpowiedzialne ujawnianie: opis wektora ataku, kroki reprodukcji,
