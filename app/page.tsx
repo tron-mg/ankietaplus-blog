@@ -28,8 +28,9 @@ export default function Home() {
           konwersji i sprzedaż planów AnkietaPlus.
         </p>
         <div className="cta-row">
-          <a href="https://ankietaplus.pl/" className="btn btn-primary">Załóż konto AnkietaPlus</a>
-          <a href="#landingi" className="btn btn-ghost">Zobacz landingi SEO</a>
+          <a href="https://ankietaplus.pl/cennik" className="btn btn-primary">Zobacz cennik</a>
+          <a href="https://ankietaplus.pl/rejestracja?plan=1" className="btn btn-ghost">Konto darmowe</a>
+          <a href="https://ankietaplus.pl/rejestracja?plan=10" className="btn btn-ghost">Plan płatny</a>
         </div>
       </header>
 

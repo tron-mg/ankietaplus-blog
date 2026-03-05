@@ -59,17 +59,23 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <article className="article-main">
+      <article className="article-main medium-style">
+        <nav className="breadcrumbs">
+          <Link href="/">Start</Link> / <Link href={`/kategoria/${doc.category}`}>{doc.category}</Link> / <span>{doc.title}</span>
+        </nav>
         <Image src={doc.cover} alt={doc.title} width={1200} height={675} className="hero-image" />
         <p className="tag">{doc.category}</p>
         <h1>{doc.title}</h1>
+        <div className="meta-row">Autor: <strong>{doc.author}</strong> · Publikacja: {doc.publishedAt} · Czas czytania: {doc.readingTimeMin} min</div>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{doc.body}</ReactMarkdown>
       </article>
       <aside className="article-side sticky">
         <div className="side-card cta-card">
           <h3>AnkietaPlus: więcej funkcji, lepsza cena</h3>
           <p>Uruchom ankietę, test lub formularz i zamień odpowiedzi w konkretne decyzje biznesowe.</p>
-          <a href="https://ankietaplus.pl/" className="btn btn-primary">Załóż konto</a>
+          <a href="https://ankietaplus.pl/cennik" className="btn btn-primary">Zobacz cennik</a>
+          <a href="https://ankietaplus.pl/rejestracja?plan=1" className="btn btn-ghost-dark">Konto darmowe</a>
+          <a href="https://ankietaplus.pl/rejestracja?plan=10" className="btn btn-ghost-dark">Plan płatny</a>
         </div>
         <div className="side-card">
           <h3>Powiązane landingi</h3>

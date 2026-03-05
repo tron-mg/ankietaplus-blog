@@ -37,3 +37,25 @@ Zamknij pętlę: analiza danych → decyzja → komunikacja zmiany.
 
 ## CTA
 Chcesz wdrożyć to bez bólu? **Uruchom AnkietaPlus** i skorzystaj z gotowych szablonów oraz automatycznych raportów.
+
+
+## Blok CRO — warianty CTA (A/B)
+**Wariant A:** „Zobacz cennik i wybierz plan w 2 minuty”
+- https://ankietaplus.pl/cennik
+
+**Wariant B:** „Załóż darmowe konto i uruchom pierwszy projekt”
+- https://ankietaplus.pl/rejestracja?plan=1
+
+**Wariant C:** „Od razu aktywuj plan bez limitów i white label”
+- https://ankietaplus.pl/rejestracja?plan=10
+
+## Lead magnet
+Pobierz checklistę wdrożenia ankiety (brief, pytania, dystrybucja, analiza) i skróć czas uruchomienia o 50%.
+
+## Compare table per ICP
+| ICP | Największa potrzeba | Co daje AnkietaPlus |
+|---|---|---|
+| Marketing | więcej leadów i lepsza segmentacja | quizy, formularze, automatyzacje |
+| HR | cykliczny feedback i eNPS | pulse surveys, szablony HR |
+| CX/Product | szybki insight po interakcjach | NPS/CSAT/CES + raporty |
+| Edukacja | testy i ewaluacje bez chaosu | testy online, punktacja, eksport |

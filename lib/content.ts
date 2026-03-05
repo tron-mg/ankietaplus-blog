@@ -12,6 +12,9 @@ export type Doc = {
   category: string;
   keyword: string;
   cover: string;
+  author: string;
+  publishedAt: string;
+  readingTimeMin: number;
   body: string;
 };
 
@@ -45,6 +48,7 @@ export function listDocs(type: DocType): Doc[] {
     const raw = fs.readFileSync(path.join(folder, file), 'utf8');
     const { meta, body } = parseFrontmatter(raw);
 
+    const words = body.trim().split(/\s+/).filter(Boolean).length;
     return {
       type,
       slug,
@@ -54,6 +58,9 @@ export function listDocs(type: DocType): Doc[] {
       category: meta.category || 'general',
       keyword: meta.keyword || '',
       cover: meta.cover || '/images/default.svg',
+      author: meta.author || 'Zespół AnkietaPlus',
+      publishedAt: meta.publishedAt || '2026-03-05',
+      readingTimeMin: Math.max(2, Math.round(words / 200)),
       body,
     };
   });
@@ -66,6 +73,7 @@ export function getDoc(type: DocType, slug: string): Doc | null {
   const raw = fs.readFileSync(p, 'utf8');
   const { meta, body } = parseFrontmatter(raw);
 
+  const words = body.trim().split(/\s+/).filter(Boolean).length;
   return {
     type,
     slug,
@@ -75,6 +83,9 @@ export function getDoc(type: DocType, slug: string): Doc | null {
     category: meta.category || 'general',
     keyword: meta.keyword || '',
     cover: meta.cover || '/images/default.svg',
+    author: meta.author || 'Zespół AnkietaPlus',
+    publishedAt: meta.publishedAt || '2026-03-05',
+    readingTimeMin: Math.max(2, Math.round(words / 200)),
     body,
   };
 }
