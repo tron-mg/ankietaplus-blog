@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getDoc, listDocs } from '@/lib/content';
+import { getCategoryMeta } from '@/lib/categories';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -26,6 +27,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
     .slice(0, 4);
 
   const relatedBlog = listDocs('blog').filter((d) => d.category === doc.category).slice(0, 6);
+  const cat = getCategoryMeta(doc.category);
 
   const pageLd = {
     '@context': 'https://schema.org',
@@ -61,10 +63,10 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <article className="article-main medium-style">
         <nav className="breadcrumbs">
-          <Link href="/">Start</Link> / <Link href={`/kategoria/${doc.category}`}>{doc.category}</Link> / <span>{doc.title}</span>
+          <Link href="/">Start</Link> / <Link href={`/kategoria/${doc.category}`}>{cat.label}</Link> / <span>{doc.title}</span>
         </nav>
         <Image src={doc.cover} alt={doc.title} width={1200} height={675} className="hero-image" />
-        <p className="tag">{doc.category}</p>
+        <p className="tag">{cat.label}</p>
         <h1>{doc.title}</h1>
         <div className="meta-row">Autor: <strong>{doc.author}</strong> · Publikacja: {doc.publishedAt} · Czas czytania: {doc.readingTimeMin} min</div>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{doc.body}</ReactMarkdown>

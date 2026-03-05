@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { listDocs } from '@/lib/content';
+import { getCategoryMeta } from '@/lib/categories';
 
 export default function Home() {
   const landings = listDocs('landings');
@@ -28,22 +29,20 @@ export default function Home() {
           konwersji i sprzedaż planów AnkietaPlus.
         </p>
         <div className="cta-row">
-          <a href="https://ankietaplus.pl/cennik" className="btn btn-primary">Zobacz cennik</a>
-          <a href="https://ankietaplus.pl/rejestracja?plan=1" className="btn btn-ghost">Konto darmowe</a>
-          <a href="https://ankietaplus.pl/rejestracja?plan=10" className="btn btn-ghost">Plan płatny</a>
+          <a href="https://ankietaplus.pl/rejestracja?plan=1" className="btn btn-primary">Załóż darmowe konto</a>
         </div>
       </header>
 
       <section className="hub-grid">
-        {categories.map((cat) => (
-          <article key={cat} className="hub-card">
-            <h3><Link href={`/kategoria/${cat}`}>{cat.toUpperCase()}</Link></h3>
-            <p>
-              {landings.filter((d) => d.category === cat).length} LP ·{' '}
-              {blog.filter((d) => d.category === cat).length} artykułów
-            </p>
-          </article>
-        ))}
+        {categories.map((cat) => {
+          const meta = getCategoryMeta(cat);
+          return (
+            <article key={cat} className="hub-card">
+              <h3><Link href={`/kategoria/${cat}`}>{meta.icon} {meta.label}</Link></h3>
+              <p>Kategoria tematyczna</p>
+            </article>
+          );
+        })}
       </section>
 
       <section id="landingi" className="section">
@@ -53,7 +52,7 @@ export default function Home() {
             <article key={d.slug} className="card">
               <Image src={d.cover} alt={d.title} width={800} height={450} className="thumb" />
               <div className="card-body">
-                <p className="tag">{d.category}</p>
+                <p className="category-line">Kategoria: {getCategoryMeta(d.category).label}</p>
                 <h3><Link href={`/landing/${d.slug}`}>{d.title}</Link></h3>
                 <p>{d.metaDescription}</p>
               </div>
@@ -69,7 +68,7 @@ export default function Home() {
             <article key={d.slug} className="card">
               <Image src={d.cover} alt={d.title} width={800} height={450} className="thumb" />
               <div className="card-body">
-                <p className="tag">{d.category}</p>
+                <p className="category-line">Kategoria: {getCategoryMeta(d.category).label}</p>
                 <h3><Link href={`/blog/${d.slug}`}>{d.title}</Link></h3>
                 <p>{d.metaDescription}</p>
               </div>

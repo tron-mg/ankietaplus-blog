@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { listDocs } from '@/lib/content';
+import { getCategoryMeta } from '@/lib/categories';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -9,9 +10,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const cat = getCategoryMeta(slug);
   return {
-    title: `Kategoria ${slug} | AnkietaPlus Blog`,
-    description: `Treści SEO w kategorii ${slug} dla AnkietaPlus.`,
+    title: `Kategoria ${cat.label} | AnkietaPlus Blog`,
+    description: `Treści SEO w kategorii ${cat.label} dla AnkietaPlus.`,
   };
 }
 
@@ -21,9 +23,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const blog = listDocs('blog').filter((d) => d.category === slug);
   if (!landings.length && !blog.length) return notFound();
 
+  const cat = getCategoryMeta(slug);
+
   return (
     <main className="container">
-      <h1>Kategoria: {slug}</h1>
+      <h1>{cat.icon} Kategoria: {cat.label}</h1>
       <p>Klaster tematyczny z pełnym cross-linkowaniem.</p>
 
       <section className="section">
