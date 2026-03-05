@@ -9,14 +9,16 @@ export function generateStaticParams() {
   return listDocs('landings').map((d) => ({ slug: d.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const doc = getDoc('landings', params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const doc = getDoc('landings', slug);
   if (!doc) return {};
   return { title: doc.metaTitle, description: doc.metaDescription };
 }
 
-export default function LandingPage({ params }: { params: { slug: string } }) {
-  const doc = getDoc('landings', params.slug);
+export default async function LandingPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const doc = getDoc('landings', slug);
   if (!doc) return notFound();
 
   const relatedLandings = listDocs('landings')
@@ -25,7 +27,7 @@ export default function LandingPage({ params }: { params: { slug: string } }) {
 
   const relatedBlog = listDocs('blog').filter((d) => d.category === doc.category).slice(0, 6);
 
-  const jsonLd = {
+  const pageLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: doc.title,
@@ -33,16 +35,42 @@ export default function LandingPage({ params }: { params: { slug: string } }) {
     about: doc.keyword,
   };
 
+  const softwareLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'AnkietaPlus',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'PLN' },
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://ankietaplus-blog.vercel.app/' },
+      { '@type': 'ListItem', position: 2, name: 'Landingi', item: 'https://ankietaplus-blog.vercel.app/' },
+      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://ankietaplus-blog.vercel.app/landing/${doc.slug}` },
+    ],
+  };
+
   return (
     <main className="article-wrap">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <article className="article-main">
         <Image src={doc.cover} alt={doc.title} width={1200} height={675} className="hero-image" />
         <p className="tag">{doc.category}</p>
         <h1>{doc.title}</h1>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{doc.body}</ReactMarkdown>
       </article>
-      <aside className="article-side">
+      <aside className="article-side sticky">
+        <div className="side-card cta-card">
+          <h3>AnkietaPlus: więcej funkcji, lepsza cena</h3>
+          <p>Uruchom ankietę, test lub formularz i zamień odpowiedzi w konkretne decyzje biznesowe.</p>
+          <a href="https://ankietaplus.pl/" className="btn btn-primary">Załóż konto</a>
+        </div>
         <div className="side-card">
           <h3>Powiązane landingi</h3>
           <ul>{relatedLandings.map((d) => <li key={d.slug}><Link href={`/landing/${d.slug}`}>{d.title}</Link></li>)}</ul>

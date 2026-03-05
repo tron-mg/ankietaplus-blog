@@ -36,7 +36,7 @@ export default function Home() {
       <section className="hub-grid">
         {categories.map((cat) => (
           <article key={cat} className="hub-card">
-            <h3>{cat.toUpperCase()}</h3>
+            <h3><Link href={`/kategoria/${cat}`}>{cat.toUpperCase()}</Link></h3>
             <p>
               {landings.filter((d) => d.category === cat).length} LP ·{' '}
               {blog.filter((d) => d.category === cat).length} artykułów

@@ -9,14 +9,16 @@ export function generateStaticParams() {
   return listDocs('blog').map((d) => ({ slug: d.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const doc = getDoc('blog', params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const doc = getDoc('blog', slug);
   if (!doc) return {};
   return { title: doc.metaTitle, description: doc.metaDescription };
 }
 
-export default function BlogPage({ params }: { params: { slug: string } }) {
-  const doc = getDoc('blog', params.slug);
+export default async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const doc = getDoc('blog', slug);
   if (!doc) return notFound();
 
   const relatedBlog = listDocs('blog')
@@ -34,17 +36,42 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
     author: { '@type': 'Organization', name: 'AnkietaPlus' },
   };
 
+  const howToLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: doc.title,
+    step: [
+      { '@type': 'HowToStep', name: 'Ustal cel badania' },
+      { '@type': 'HowToStep', name: 'Zaprojektuj pytania' },
+      { '@type': 'HowToStep', name: 'Uruchom dystrybucję' },
+      { '@type': 'HowToStep', name: 'Przeanalizuj wyniki i wdroż zmiany' },
+    ],
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://ankietaplus-blog.vercel.app/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://ankietaplus-blog.vercel.app/' },
+      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://ankietaplus-blog.vercel.app/blog/${doc.slug}` },
+    ],
+  };
+
   return (
     <main className="article-wrap">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
-      <article className="article-main">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+
+      <article className="article-main medium-style">
         <Image src={doc.cover} alt={doc.title} width={1200} height={675} className="hero-image" />
         <p className="tag">{doc.category}</p>
         <h1>{doc.title}</h1>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{doc.body}</ReactMarkdown>
       </article>
 
-      <aside className="article-side">
+      <aside className="article-side sticky">
         <div className="side-card cta-card">
           <h3>Przetestuj AnkietaPlus</h3>
           <p>Najwięcej funkcjonalności w najlepszej cenie. Uruchom pierwszą ankietę w kilka minut.</p>
