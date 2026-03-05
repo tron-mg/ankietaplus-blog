@@ -16,9 +16,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://blog.ankietaplus.pl'),
   title: "Blog AnkietaPlus — ankiety online, testy, quizy i formularze",
   description:
     "Artykuły i landingi SEO o ankietach internetowych, testach online i formularzach. Praktyczne przewodniki nastawione na wynik biznesowy.",
+  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    url: 'https://blog.ankietaplus.pl',
+    siteName: 'AnkietaPlus Blog',
+    title: 'Blog AnkietaPlus — ankiety online, testy, quizy i formularze',
+    description:
+      'Artykuły i landingi SEO o ankietach internetowych, testach online i formularzach. Praktyczne przewodniki nastawione na wynik biznesowy.',
+    images: [{ url: '/images/default.svg', width: 1200, height: 675, alt: 'AnkietaPlus Blog' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog AnkietaPlus — ankiety online, testy, quizy i formularze',
+    description:
+      'Artykuły i landingi SEO o ankietach internetowych, testach online i formularzach. Praktyczne przewodniki nastawione na wynik biznesowy.',
+    images: ['/images/default.svg'],
+  },
   verification: {
     google: "331t1dgJP6nk_amxKnCZC-0uZMvgTFRplt8LKlW80b8",
     other: {

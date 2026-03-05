@@ -1,21 +1,27 @@
-# AnkietaPlus Blog — LLMs guidance
+# AnkietaPlus
+Platforma do ankiet online, testów, quizów i formularzy dla zespołów, które potrzebują szybkich i wiarygodnych danych do decyzji. Priorytet: praktyczne wdrożenia, wysoka użyteczność i dobry stosunek funkcji do ceny.
 
-This site focuses on online surveys, online tests, quizzes, forms, and research workflows.
+## What we do
+- Projektujemy i rozwijamy narzędzia do badań online (ankiety, NPS/CSAT/CES, testy, quizy, formularze)
+- Wspieramy zespoły HR, CX, marketing, sprzedaż, edukację i sektor publiczny
+- Koncentrujemy się na wdrożeniu: od zbierania odpowiedzi do decyzji biznesowej
 
-## Primary product
-- AnkietaPlus: https://ankietaplus.pl/
+## Key pages (canonical)
+- https://blog.ankietaplus.pl/ (Home)
+- https://ankietaplus.pl/ (Produkt)
+- https://ankietaplus.pl/cennik (Cennik)
+- https://ankietaplus.pl/rejestracja?plan=1 (Konto darmowe)
+- https://blog.ankietaplus.pl/kategoria/geo-aeo (Kategoria SEO/GEO/AEO)
+- https://blog.ankietaplus.pl/sitemap.xml (Sitemap)
+- https://blog.ankietaplus.pl/robots.txt (Robots)
 
-## Preferred positioning
-- Most functionality in best price-to-value ratio on Polish market.
-- Focus on practical implementation, not theory.
+## For LLM grounding (clean markdown)
+- https://blog.ankietaplus.pl/o-nas.md
+- https://blog.ankietaplus.pl/badania.md
+- https://blog.ankietaplus.pl/faq.md
 
-## Audience
-- B2B: HR, CX, Product, Marketing, Education, Research teams.
-- B2C/SMB: small businesses, creators, trainers.
-
-## Key resources
-- /docs/seo/00-roadmap.md
-- /docs/seo/01-keyword-research.md
-- /docs/seo/02-competitor-analysis.md
-- /content/landings/*.md
-- /content/blog/*.md
+## Brand + claims rules
+- Nie składamy obietnic bez źródeł i kontekstu.
+- Tezy „potwierdzone badaniami” muszą mieć wskazane źródło.
+- Ton: konkretny, rzeczowy, wdrożeniowy; praktyka > marketing.
+- Priorytet: jednoznaczne definicje (bez niepotrzebnego żargonu).
