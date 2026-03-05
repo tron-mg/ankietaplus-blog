@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      { source: '/blog/:slug*.md', destination: '/blog/:slug*/md' },
+      { source: '/landing/:slug*.md', destination: '/landing/:slug*/md' },
+    ];
+  },
   async headers() {
     return [
       {
