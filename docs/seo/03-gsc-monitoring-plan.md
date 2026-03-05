@@ -2,7 +2,7 @@
 
 ## Konfiguracja
 1. Dodać property domenowe i URL prefix dla bloga.
-2. Podpiąć sitemap: `https://ankietaplus-blog.vercel.app/sitemap.xml`.
+2. Podpiąć sitemap: `https://blog.ankietaplus.pl/sitemap.xml`.
 3. Włączyć alerty coverage + manual actions.
 
 ## Dashboard tygodniowy

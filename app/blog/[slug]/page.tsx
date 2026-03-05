@@ -34,7 +34,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     '@type': 'Article',
     headline: doc.title,
     description: doc.metaDescription,
-    image: `https://ankietaplus-blog.vercel.app${doc.cover}`,
+    image: `https://blog.ankietaplus.pl${doc.cover}`,
     author: { '@type': 'Organization', name: 'AnkietaPlus' },
   };
 
@@ -54,9 +54,9 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://ankietaplus-blog.vercel.app/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://ankietaplus-blog.vercel.app/' },
-      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://ankietaplus-blog.vercel.app/blog/${doc.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://blog.ankietaplus.pl/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://blog.ankietaplus.pl/' },
+      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://blog.ankietaplus.pl/blog/${doc.slug}` },
     ],
   };
 

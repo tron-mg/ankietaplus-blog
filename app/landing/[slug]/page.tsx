@@ -50,9 +50,9 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://ankietaplus-blog.vercel.app/' },
-      { '@type': 'ListItem', position: 2, name: 'Landingi', item: 'https://ankietaplus-blog.vercel.app/' },
-      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://ankietaplus-blog.vercel.app/landing/${doc.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://blog.ankietaplus.pl/' },
+      { '@type': 'ListItem', position: 2, name: 'Landingi', item: 'https://blog.ankietaplus.pl/' },
+      { '@type': 'ListItem', position: 3, name: doc.title, item: `https://blog.ankietaplus.pl/landing/${doc.slug}` },
     ],
   };
 
